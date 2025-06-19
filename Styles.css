@@ -1,131 +1,165 @@
 :root {
-      --choco-light: #8b4513;
-      --choco-dark: #8b4513;
-      --choco-bg: #fffaf0;
-    }
+  --choco-light: #8b4513;
+  --choco-dark: #8b4513;
+  --choco-bg: #fffaf0;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: serif;
-      font-size:large;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif;
+  font-size: large;
+}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--choco-bg);
-      color: #333;
-      line-height: 1.6;
-      padding-top: 100px;
-    }
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--choco-bg);
+  color: #333;
+  line-height: 1.6;
+  padding-top: 100px;
+}
 
-    header {
-      background: var(--choco-dark);
-      color: white;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+header {
+  background: var(--choco-dark);
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-    .navbar {
-      max-width: 1100px;
-      margin: auto;
-      padding: 1em;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .logo {
-      font-size: 1.6em;
-      font-family: 'Playfair Display', serif;
-    }
+.logo {
+  font-size: 1.6em;
+  font-family: "Playfair Display", serif;
+}
 
-    .logo::before {
+/* .logo::before {
       content: "🍫 ";
     }
+      */
 
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5em;
-    }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
 
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links ul > li button {
+  color: black;
+}
+.nav-links a:hover {
+  color: #ffd700;
+}
+.sidenav {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  right: 0;
+  background-color: var(--choco-dark); 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: 500;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.toggle {
+  display: none;
+}
 
-    .nav-links a:hover {
-      color: #ffd700;
-    }
+#hero {
+  text-align: center;
+  padding: 4em 1em;
+  background: linear-gradient(to right, #f4e1d2, #e6ccb2);
+}
 
-    #hero {
-      text-align: center;
-      padding: 4em 1em;
-      background: linear-gradient(to right, #f4e1d2, #e6ccb2);
-    }
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--choco-dark);
+  margin-bottom: 1em;
+}
 
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid var(--choco-dark);
-      margin-bottom: 1em;
-    }
+h2 {
+  color: var(--choco-light);
+  margin-bottom: 1em;
+}
 
-    h2 {
-      color: var(--choco-light);
-      margin-bottom: 1em;
-    }
+section {
+  padding: 4em 1em;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    section {
-      padding: 4em 1em;
-      max-width: 1000px;
-      margin: auto;
-    }
+#about p {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
 
-    #about p {
-      background: #fff;
-      padding: 1.5em;
-      border-radius: 12px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-    }
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
 
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1em;
-      justify-content: center;
-    }
+.skills-list li {
+  background-color: var(--choco-dark);
+  color: #fff;
+  padding: 0.7em 1.2em;
+  border-radius: 20px;
+  list-style: none;
+  font-weight: 500;
+}
 
-    .skills-list li {
-      background-color: var(--choco-dark);
-      color: #fff;
-      padding: 0.7em 1.2em;
-      border-radius: 20px;
-      list-style: none;
-      font-weight: 500;
-    }
-
-    article, .project {
-      background-color: #fff;
-      padding: 2em;
-      margin-bottom: 2em;
-      border-left: 5px solid var(--choco-light);
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-
+article,
+.project {
+  background-color: #fff;
+  padding: 2em;
+  margin-bottom: 2em;
+  border-left: 5px solid var(--choco-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
 
 .contact-container {
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -133,42 +167,30 @@
   margin: auto;
   gap: 30px;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   padding-left: 8px;
-
 }
 
 .contact-info {
-
   flex: 1;
   min-width: 250px;
-
 }
 
 .contact-info h2 {
-
   font-size: 28px;
   margin-bottom: 20px;
-
 }
 
-
-
 .contact-info p {
-
   line-height: 1.6;
 
   color: grey;
-
 }
-
-
 
 /* Form Styling */
 
 .contact-form {
-
   flex: 1;
 
   min-width: 280px;
@@ -178,15 +200,10 @@
   padding: 30px;
 
   border-radius: 10px;
-
 }
 
-
-
 .contact-form input,
-
 .contact-form textarea {
-
   width: 100%;
 
   padding: 12px;
@@ -200,20 +217,14 @@
   border-radius: 5px;
 
   font-size: 16px;
-
 }
 
-
-
 .contact-form textarea {
-
   height: 120px;
   resize: none;
-
 }
 
 .contact-form button {
-
   width: 100%;
   padding: 12px;
   background-color: #1c1c1c;
@@ -223,61 +234,74 @@
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
-
 }
-
 
 .contact-form button:hover {
-
   background-color: #333;
-
 }
 
-    input, textarea {
-      padding: 0.75em;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
+input,
+textarea {
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
 
-    button[type="submit"] {
-      background-color: var(--choco-light);
-      color: white;
-      padding: 0.75em;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
+button[type="submit"] {
+  background-color: var(--choco-light);
+  color: white;
+  padding: 0.75em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
 
-    button[type="submit"]:hover {
-      background-color: var(--choco-dark);
-    }
+button[type="submit"]:hover {
+  background-color: var(--choco-dark);
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-    footer {
-      text-align: center;
-      padding: 2em 1em;
-      background-color: var(--choco-dark);
-      color: white;
-    }
+footer {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: var(--choco-dark);
+  color: white;
+}
 
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-links {
-        flex-direction: column;
-        gap: 1em;
-        margin-top: 1em;
-      }
-      .skills-list {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+@media only screen and (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+  .toggle {
+    display: block;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
