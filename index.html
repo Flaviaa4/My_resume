@@ -10,10 +10,10 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="geist-font">
     <header>
       <nav class="navbar">
-        <h1 class="logo">Flavienne BENIHIRWE</h1>
+        <h1 class="logo geist-mono">Flavienne BENIHIRWE</h1>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -123,17 +123,23 @@
           <p>Email: beniflavienne@gmail.com<br />Phone: +250 780473722</p>
         </div>
 
-        <form class="contact-form">
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="E-mail" required />
-          <textarea placeholder="Message" required></textarea>
+        <form id="contact-form" class="contact-form">
+          <label for="name">Username:</label>
+          <input id="name" type="text" placeholder="Name" />
+          <p id="name-error"></p>
+          <label for="email">Email:</label>
+          <input id="email" placeholder="E-mail" />
+          <p id="email-error"></p>
+          <label for="message">Message:</label>
+          <textarea id="message" placeholder="Message"></textarea>
+          <p id="message-error"></p>
           <button type="submit">Send Message</button>
         </form>
       </div>
     </section>
 
     <footer>
-      <p>&copy; 2025 Flavienne. All rights reserved.</p>
+      <p>&copy; <span id="fullyear"></span> Flavienne. All rights reserved.</p>
     </footer>
 
     <script src="Script.js"></script>
