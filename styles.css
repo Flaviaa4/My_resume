@@ -1,3 +1,4 @@
+//Fonts and colors that I will need in my Resume.
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
 :root {
@@ -5,7 +6,7 @@
   --choco-dark: #8b4513;
   --choco-bg: #fffaf0;
 }
-
+// General stylings.
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +23,7 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
-
+// Unique styles for the Body part.
 body {
   background-color: var(--choco-bg);
   color: #333;
@@ -30,7 +31,7 @@ body {
   /* padding-top: 100px; */
   margin-top: 6em;
 }
-
+// Styling header with the navbar and Log
 header {
   background: var(--choco-dark);
   color: white;
@@ -53,11 +54,6 @@ header {
 .logo {
   font-size: 1.6em;
 }
-
-/* .logo::before {
-      content: "🍫 ";
-    }
-      */
 
 .nav-links {
   list-style: none;
@@ -109,7 +105,7 @@ header {
 .toggle {
   display: none;
 }
-
+// styling the first Div which includes my picture
 #hero {
   text-align: center;
   padding: 4em 1em;
@@ -124,7 +120,7 @@ header {
   border: 5px solid var(--choco-dark);
   margin-bottom: 1em;
 }
-
+//all headings 2 styles
 h2 {
   color: var(--choco-light);
   margin-bottom: 1em;
@@ -168,7 +164,7 @@ article,
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
-
+// contact part
 .contact-container {
   display: flex;
   flex-wrap: wrap;
@@ -313,7 +309,7 @@ footer {
   background-color: var(--choco-dark);
   color: white;
 }
-
+//Responsiveness of my website styling, but in General.
 @media only screen and (max-width: 600px) {
   .nav-links {
     display: none;
